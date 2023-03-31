@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Crud version 1</title>
+        <title>Crud version 0</title>
 </head>
 <body>
     <center>
@@ -45,6 +45,7 @@ echo '<table border="1" cellpadding = "2" cellspacing="2">
         <td> <font face="Arial">Lastname</font></td>
         <td> <font face="Arial">Email</font></td>
         <td> <font face="Arial">custid</font></td>
+        <td> <font face="Arial">action</font></td>
        </tr>';
     if($result = $conn->query($query)){
         while($row = $result->fetch_assoc()){
@@ -57,6 +58,7 @@ echo '<table border="1" cellpadding = "2" cellspacing="2">
                 <td>'.  $field2name. '</td>
                 <td>'.  $field3name. '</td>
                 <td>'.  $field4name. '</td>
+                <td><a href=dele.php?cust='.$field4name .'> <img src="del.jpg" width=20 height=20></a></td>
              </tr>';
           
         }
